@@ -33,11 +33,12 @@ func mutexIncrement(rountineSize int) {
 			for {
 				mu.Lock()
 				count++
-				mu.Unlock()
 				if count >= max {
+					mu.Unlock()
 					ch <- true
 					return
 				}
+				mu.Unlock()
 			}
 		}()
 	}
