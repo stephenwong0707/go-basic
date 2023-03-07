@@ -2,8 +2,6 @@ package memory
 
 import "testing"
 
-var output bar
-
 func BenchmarkPtrInPtrOut(b *testing.B) {
 	var tmp *bar
 	for i := 0; i < b.N; i++ {

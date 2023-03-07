@@ -11,6 +11,7 @@ type bar struct {
 }
 
 var input foo
+var output bar
 
 func init() {
 	input = foo{
